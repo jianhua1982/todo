@@ -1,0 +1,222 @@
+@import "../../../../node_modules/weui/src/style/base/fn.less";
+@import "../../lib/vendor/swiper/swiper.min.css";
+
+.sns {
+  background-color: #f8f8f8;
+  //position: relative;
+
+  .weui_tabbar {
+    position: fixed;
+  }
+
+  section {
+    //width: 100%;
+    //padding: 0 0 10px;
+    //padding-top: 10px;
+    padding-bottom: 40px;
+
+    /******  timeline  *****/
+
+    &.timeline {
+      .profile-banner {
+        img {
+          width: 100%;
+          max-height: 180px;
+        }
+      }
+
+      ul.msg-list {
+
+        list-style: none;
+        margin: 30px auto 20px;
+
+        li {
+          display: flex;
+          align-content: flex-start;
+
+          //position: relative;
+          //&:before {
+          //  .setTopLine(#f9f9f9);
+          //  left: 0;
+          //}
+
+          // onepx
+          position: relative;
+          &:before {
+            .setTopLine(#D9D9D9);
+            //left: @weuiCellGapH;
+            left: 0px;
+          }
+          &:first-child {
+            &:before {
+              display: none;
+            }
+          }
+
+          .thumb-icon {
+            margin: 12px;
+
+            img {
+              width: 43px;
+              height: 43px;
+            }
+          }
+
+          .desc {
+            margin: 12px 12px 12px 0;
+
+            .nick-name {
+              color: #536992;
+            }
+
+            .short-text {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 3;
+              line-height: 1.2em;
+
+              color: #333333;
+              //-webkit-line-clamp: 3;
+              font-size: 16px;
+              font-weight: 600;
+            }
+          }
+
+          ul {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            margin: 10px auto;
+
+            a {
+              img {
+                @media (min-width: 320px) {
+                  width: 75px;
+                  height: 75px;
+                }
+                //
+                @media (min-width: 360px) {
+                  width: 90px;
+                  height: 90px;
+                }
+
+                @media (min-width: 400px) {
+                  width: 100px;
+                  height: 100px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /******  discover  *****/
+
+    &.discover {
+
+      //position: absolute;
+      //top: 0px;
+      //left: 0px;
+
+      .swiper-container {
+        padding-top: 10px;
+        padding-bottom: 40px;
+
+        //.swiper-wrapper {
+        //  width: 300px;
+        //  height: 225px;
+        //}
+
+        .swiper-slide {
+          background-position: center;
+          background-size: cover;
+          width: 300px;
+          height: 200px;
+        }
+      }
+
+      .grid_images {
+        ul {
+          margin: 20px auto 65px;
+          list-style: none;
+
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-around;
+
+          li {
+            a {
+              img {
+
+                @media (min-width: 320px) {
+                  width: 100px;
+                  height: 75px;
+                }
+
+                @media (min-width: 375px) {
+                  width: 120px;
+                  height: 90px;
+                }
+
+                @media (min-width: 400px) {
+                  width: 135px;
+                  height: 105px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /******  mine  *****/
+
+    &.mine {
+      .user_info {
+        background: #383838;
+      }
+    }
+
+    &.upload {
+      textarea {
+
+      }
+
+      .grid_images {
+        ul {
+          margin: 20px auto 65px;
+          list-style: none;
+
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-around;
+
+          li {
+            a {
+              img {
+
+                @media (min-width: 320px) {
+                  width: 100px;
+                  height: 75px;
+                }
+
+                @media (min-width: 375px) {
+                  width: 120px;
+                  height: 90px;
+                }
+
+                @media (min-width: 400px) {
+                  width: 135px;
+                  height: 105px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

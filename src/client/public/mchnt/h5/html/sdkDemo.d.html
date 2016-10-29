@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+    <title>UPSDK DEMO (动态加载)</title>
+
+    <link type="text/css" rel="stylesheet" href="../css/mchnt.css"/>
+
+</head>
+
+<body>
+    <div>
+        <button class="addBankCard">添加银行卡 (addBankCard)</button>
+    </div>
+
+    <div>
+        <button class="scanQRCode">扫一扫 (scanQRCode)</button>
+        <!--<p class="tips"> needResult:-->
+        <!--<select>-->
+        <!--<option value="0">0：扫描结果由钱包处理</option>-->
+        <!--<option value="1">1：直接返回扫描结果</option>-->
+        <!--<option value="">默认为0</option>-->
+        <!--</select>-->
+        <!--</p>-->
+    </div>
+
+    <div>
+        <button class="chooseImage">拍照或从手机相册中选图</button>
+        <!--<p class="tips">sourceType: 1.camera; 2.album; 3.all(default)</p>-->
+        <p class="tips"> sourceType:
+            <select>
+                <option value="1">1：仅允许拍照</option>
+                <option value="2">2：仅允许从手机相册中选图</option>
+                <option value="3">3：拍照或从手机相册中选图，都支持</option>
+                <option value="">默认为3，全支持</option>
+            </select>
+        </p>
+        <input class="max-width" type="number" maxlength="4" placeholder="maxWidth，默认500">
+        <input class="max-height" type="number" maxlength="4" placeholder="maxHeight，默认1000">
+    </div>
+
+    <div>
+        <button class="closeWebApp">关闭当前窗口</button>
+    </div>
+
+    <div>
+        <button class="setNavigationBarTitle">设置标题</button>
+    </div>
+    <div>
+        <button class="setNavigationBarRightButton">设置右边按钮</button>
+    </div>
+
+    <div>
+        <button class="pay">支付</button>
+        <input class="tn" type="number" maxlength="22" placeholder="测试环境TN号">
+        <input class="apply-pay" type="text" maxlength="20" placeholder="ApplyPay商户号">
+        <!--<p class="pay-tips">tn在url参数中，eg: sdkDemo.html?tn=201605xxxx</p>-->
+    </div>
+
+    <div>
+        <button class="exceptions bad-case"> 异常案例集合 </button>
+    </div>
+
+    <div>
+        <button class="for-client"> 客户端案例集合 </button>
+    </div>
+
+    <!--<script type="text/javascript" src="../js/zepto.min.js"></script>-->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/require.js"></script>
+    <script type="text/javascript" src="../js/sdkCommon.js"></script>
+    <script type="text/javascript" src="../js/sdkDemo.d.js"></script>
+
+</body>
+</html>

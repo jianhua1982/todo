@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>钱包平台</title>
+    <link rel="stylesheet" href="css/up.css">
+</head>
+<body>
+      <div class="head_box">
+          <div class="inner">
+              <h1 class="logo">
+                  <a href="up.html"> <img title="银联钱包开放平台" src="image/sample.png"/></a>
+              </h1>
+
+          </div>
+      </div>
+
+  <div class="container_box">
+      <div class="col_side">
+        <!--  <div class="portal">
+              <h5><span class="arrow"></span>开发指南</h5>
+              <div style="display:none">
+                <ul>
+                      <li><a>平台开发概述</a></li>
+                      <li><a>开发者规范</a></li>
+                    <li><a>接口权限说明</a></li>
+                    <li><a>接口调用频率限制说明</a></li>
+                    <li><a>接口返回码说明</a></li>
+                  </ul>
+              </div>
+          </div>-->
+          <div class="portal">
+              <h5><span class="arrow"></span>第三方商户接入接口说明</h5>
+              <div>
+                  <ul>
+                      <li><a href="devDocPortLogin.html">用户联登</a></li>
+                      <li class="cour"><a href="devDocPortUIPlugin.html">调用钱包UI插件功能</a></li>
+                      <li><a href="devDocPortDemo.html">DEMO代码</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="portal">
+              <h5><span class="arrow"></span>钱包网页开发</h5>
+              <div style="display:none">
+                  <ul>
+                      <li><a>钱包网页授权</a></li>
+                      <li><a>钱包网页样式库</a></li>
+                      <li><a>钱包UP-SDK说明</a></li>
+                      <li><a>钱包开发者工具</a></li>
+                  </ul>
+              </div>
+          </div>
+
+
+      </div>
+      <div class="col_main">
+          <h2 class="tit">二、调用钱包UI插件功能</h2>
+          <div class="port">
+              <h4 class="port_tit">1) 使用场景</h4>
+              <p>
+                  商户侧H5需要使用钱包暴露出来的一些插件，包括支付，扫一扫等等。
+              </p>
+              <h4 class="port_tit">2) 前置条件 </h4>
+              <p>a) 同（一、用户联登） 登录商户接入平台，见钱包后台分配给商户侧的appid, secret, 请填写商户侧页面在钱包中所有需要跳转的域名（最多3个）。  a) 登录钱包商户接入平台，填写商户名称，营业执照等信息（包括商户侧OAUTH授权回调域名），钱包后台会分配商户appid, secret。
+              </p>
+              <p>
+              b) 商户侧后台需与钱包后台对接（获取签名要素），为安全起见，appid, secret需要放置在商户侧后台，不要暴露在前端H5页面。</p>
+              <h4 class="port_tit">3) 第三方H5接入，JSSDK使用步骤</h4>
+              <p class="step">
+                  步骤一：引入JS文件
+              </p>
+              <p>在需要调用JS接口的页面引入如下JS文件，（支持https）：  </p>
+              <p>
+                  https://open.95516.com/s/wl/web/upsdk/sdk.js
+              </p>
+
+              <p class="step">步骤二：通过config接口注入权限验证配置</p>
+              <p class="suggest">所有需要使用JS-SDK的页面必须先注入配置信息，否则将无法调用（同一个url仅需调用一次; 如果跳转的页面无需使用插件，则无需config, 否则需要重新执行config）。</p>
+
+              <p class="detail">
+                  upsdk.config({<br/>
+                  appId: '', // 必填，接入方的唯一标识<br/>
+                  timestamp: , // 必填，生成签名的时间戳<br/>
+                  nonceStr: '', // 必填，生成签名的随机串<br/>
+                  signature: '',// 必填，生成签名的摘要，采用sha1算法<br/>
+                  }); </p>
+              <p class="step">
+                  步骤三：通过ready接口处理成功验证</p>
+
+              <p>
+                  upsdk.ready(function(){<br/>
+                  // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，     <br/>
+                  config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。
+                  <br/>   对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。<br/>
+                  });
+              </p>
+              <p class="step">步骤四：通过error接口处理失败验证</p>
+              <p>
+                  upsdk.error(function(res){<br/>
+                  // config信息验证失败会执行error函数，如签名过期导致验证失败。<br/>
+                  });
+              </p>
+              <p>&nbsp;</p>
+              <h4>附件一：JSSDK签名算法</h4>
+              <p class="step">步骤一：首先获取front_token</p>
+              <p>作为页面签名要素， frontd_token由第三方后台向钱包后台请求获取（7200秒有效）。</p>
+              <p>https://open.95516.com/sdk/token?grant_type=client_credential&appid=APPID&secret=APPSECRET </p>
+              <p>签名生成规则如下：</p>
+              <div class="detail01">
+                  <p>1).参与签名的字段包括noncestr（随机字符串）,  有效的front_token, timestamp（时间戳）,
+                  url（当前网页的URL，不包含#及其后面部分） 。</p>
+                   <p>2).对所有待签名参数按照字段名的ASCII 码从小到大排序（字典序）后，
+                  使用URL键值对的格式（即key1=value1&key2=value2…）拼接成字符串string1。</p2>
+                 <p> 3). 这里需要注意的是所有参数名均为小写字符。</p>
+                  <p>4).对string1作sha1加密，字段名和字段值都采用原始值，不进行URL 转义。即signature=sha1(string1)。</p>
+              </div>
+              <p> 示例：</p>
+              <div class="detail01">
+                  <p>1).front_token=sM4AOVdWfPE4DxkXGEs8VMCPGGVi4C3VM0P37wVUCFvkVAy_90u5h9nbSlYy3-Sl-HhTdfl2fzFy1AOcHKP7qg</p>
+             <p> 2).noncestr=Wm3WZYTPz0wzccnW</p>
+              <p>3).timestamp=1414587457</p>
+              <p>4).url=http://haigou.unionpay.com?params=value</p>
+                  </div>
+
+              <p class="step">步骤二： 对所有待签名参数按照字段名的ASCII 码从小到大排序（字典序）后，使用URL键值对的格式（即key1=value1&key2=value2…）拼接成字符串string1：</p>
+              <p>
+                  front_token=sM4AOVdWfPE4DxkXGEs8VMCPGGVi4C3VM0P37wVUCFvkVAy_90u5h9nbSlYy3-Sl-HhTdfl2fzFy1AOcHKP7qg&noncestr=Wm3WZYTPz0wzccnW& timestamp=1414587457&url=http://haigou.unionpay.com?params=value
+              </p>
+              <p class="step">步骤三： 对string1进行sha1签名，得到signature：</p>
+              <p >22d7cd98918d48385a70057c7c86177338e6de61</p>
+              <p class="step">注意事项：</p>
+              <p>1).签名用的noncestr和timestamp必须与upsdk.config中的noncestr和timestamp相同。</p>
+              <p>2).签名用的url必须是调用JS接口页面的完整URL。</p>
+              <p class="suggest">3).出于安全考虑，开发者必须在服务器端实现签名的逻辑。</p>
+
+
+          </div>
+
+
+      </div>
+
+
+
+  </div>
+  <div class="foot_box">
+      <div class="inner">
+          <ul class="link">
+              <li class="link_item first"><a target="_blank" href="">关于我们</a></li>
+              <li class="link_item"><a target="_blank" href="">服务协议</a></li>
+              <li class="link_item"><a target="_blank" href="">安全中心</a></li>
+              <li class="link_item"><a target="_blank" href="">用户反馈</a></li>
+          </ul>
+      </div>
+  </div>
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <script type="text/javascript" src="js/devDoc.js"></script>
+</body>
+</html>

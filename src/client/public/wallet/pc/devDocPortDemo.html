@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>钱包平台</title>
+    <link rel="stylesheet" href="css/up.css">
+</head>
+<body>
+      <div class="head_box">
+          <div class="inner">
+              <h1 class="logo">
+                  <a href="up.html"> <img title="银联钱包开放平台" src="image/sample.png"/></a>
+              </h1>
+
+          </div>
+      </div>
+
+  <div class="container_box">
+      <div class="col_side">
+
+          <div class="portal">
+              <h5><span class="arrow"></span>第三方商户接入接口说明</h5>
+              <div>
+                  <ul>
+                      <li><a href="devDocPortLogin.html">用户联登</a></li>
+                      <li><a href="devDocPortUIPlugin.html">调用钱包UI插件功能</a></li>
+                      <li class="cour"><a href="devDocPortDemo.html">DEMO代码</a></li>
+
+                  </ul>
+              </div>
+          </div>
+          <div class="portal">
+              <h5><span class="arrow"></span>钱包网页开发</h5>
+              <div style="display:none">
+                  <ul>
+                      <li><a>钱包网页授权</a></li>
+                      <li><a>钱包网页样式库</a></li>
+                      <li><a>钱包UP-SDK说明</a></li>
+                      <li><a>钱包开发者工具</a></li>
+                  </ul>
+              </div>
+          </div>
+
+
+      </div>
+      <div class="col_main">
+          <h2 class="tit">三、demo</h2>
+          <div class="dev_id">
+              <h4 class="dev_tit">1) 使用场景</h4>
+              <p>
+                  商户侧需要获取钱包登录用户的信息并且对用户进行唯一标记。如果仅需要openid,则使用静默授权，否则需要用户同意，显示授权。
+              </p>
+              <h4 class="dev_tit">2) 前置条件 </h4>
+              <p>
+                  a) 登录钱包商户接入平台，填写商户名称，营业执照等信息（包括商户侧OAUTH授权回调域名），钱包后台会分配商户appid, secret。
+              </p>
+              <p>b) 商户侧后台需与钱包后台对接，为安全起见，appid, secret需要放置在接入方后台，不要暴露在前端H5页面。</p>
+
+          </div>
+
+
+
+      </div>
+
+
+
+  </div>
+  <div class="foot_box">
+      <div class="inner">
+          <ul class="link">
+              <li class="link_item first"><a target="_blank" href="">关于我们</a></li>
+              <li class="link_item"><a target="_blank" href="">服务协议</a></li>
+              <li class="link_item"><a target="_blank" href="">安全中心</a></li>
+              <li class="link_item"><a target="_blank" href="">用户反馈</a></li>
+          </ul>
+      </div>
+  </div>
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <script type="text/javascript" src="js/devDoc.js"></script>
+</body>
+</html>

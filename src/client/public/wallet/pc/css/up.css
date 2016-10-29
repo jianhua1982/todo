@@ -1,0 +1,480 @@
+ul, ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, fieldset, textarea {
+    margin: 0;
+}
+body {
+    color: #222;
+   /* font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft YaHei","黑体",Arial,sans-serif;*/
+    font-family: "Microsoft YaHei","黑体",Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    background:#f8f8f8;
+    margin:0;
+}
+.head_box {
+    background-color: #fff;
+    border-bottom: 1px solid #d9dadc;
+    border-top: 4px solid #000;
+    position: relative;
+}
+
+ .inner::after {
+    clear: both;
+    content: "​";
+    display: block;
+    height: 0;
+}
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+
+.factor{
+    margin:20px auto;
+    width: 435px;
+}
+.factor h4{
+border-bottom: 1px dashed #ccc;
+    margin-bottom:5px;
+    margin-top:15px;
+    padding-bottom: 5px;
+}
+.factor p{
+    color:#999;
+    font-size:12px;
+    padding:5px;
+}
+.factor label {
+    color: #666;
+    display: block;
+    float: left;
+    font-size: 14px;
+    height: 42px;
+    line-height: 42px;
+    margin-right: 10px;
+    text-align: right;
+    width:110px;
+}
+
+.factor input {
+    border: 1px solid #ddd;
+    color: #666;
+    display: block;
+    float: left;
+    font-size: 14px;
+    height: 16px;
+    margin-right: 10px;
+    padding: 11px 10px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    width:230px;
+}
+.factor-item {
+    clear: both;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.factor-item::after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+.factor-item  .pass-button {
+    background: #004280;
+   /* background: #007a8a;*/
+    border: medium none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    height: 50px;
+    transition: all 0.3s ease 0s;
+    float:right;
+    width:180px;
+    position:relative;
+    right:168px;
+}
+
+
+.logo {
+    float: left;
+    padding-top:15px;
+}
+
+
+
+.account {
+    float: right;
+    padding-top: 25px;
+}
+
+.account_line {
+    color: #8d8d8d;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0 5px;
+    position: relative;
+    top: -1px;
+}
+.container_box{
+    width: 1000px;
+    margin:30px auto;
+   border: 1px solid #d9dadc;
+    background:#fff;
+    min-height: 500px;
+}
+
+
+.foot_box {
+    background-color: #b8b9b9;
+    color: #f1f1f1;
+    padding: 24px 0;
+    text-align: center;
+   /* margin-top:30px;*/
+}
+
+
+.link_item.first {
+    border-left-width: 0;
+}
+ .link_item {
+    border-left-color: #f1f1f1;
+}
+.link_item {
+    border-left: 1px solid #d9dadc;
+    display: inline-block;
+    line-height: 1em;
+    padding: 0 1em;
+    vertical-align: middle;
+}
+
+.link {
+    font-size: 12px;
+}
+
+ .link_item a {
+    color: #f1f1f1;
+}
+
+a {
+    color: #459ae9;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration:underline;
+}
+
+.container_box .col_side {
+    max-width: 208px;
+    width: 23%;
+}
+.container_box .col_side, .container_box .col_main {
+    display: table-cell;
+    vertical-align: top;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+ .col_side {
+    border-right: 1px solid #e7e7eb;
+     background-color: #fff;
+     min-height: 1px;
+}
+
+.container_box .col_main {
+    height: 700px;
+    width: 2000px;
+}
+.container_box .col_main  .tit{
+    font-size:16px;
+    text-align:center;
+    height:65px;
+    line-height:65px;
+    border-bottom:1px solid #d9d9d9;
+}
+ .dev_id,.safe_domain{
+    border-bottom: 1px solid #d9d9d9;
+    margin: 30px 80px 30px;
+    padding-bottom: 20px;
+}
+.dev_id p{
+    padding:5px;
+}
+
+.port{
+    margin: 30px;
+    padding-bottom: 20px;
+}
+.port .port_tit{
+
+}
+.port .step{
+    padding:10px;
+    background:#f8f8f8;
+    border:1px solid #e7e7e7;
+    margin:10px;
+}
+.port .detail{
+    padding:10px 20px;
+    background:#fcfcfc;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+    margin:10px;
+}
+.port .detail01{
+    padding:10px 20px;
+    background:#fcfcfc;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+    margin:10px;
+}
+.port .suggest{
+   color:#ff0000;
+}
+.port .suggestBlue{
+    color:#0000ff;
+}
+.port p{
+    padding:10px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.thead {
+    background-color: #f4f5f9;
+}
+
+.thead th {
+    line-height: 20px;
+    padding:8px;
+    text-align: left;
+    border:1px solid #eee;
+}
+td{text-align:left;
+    padding:8px;
+    border:1px solid #eee
+}
+
+/*.safe_domain p.confirm{
+    padding-left:65px;
+}*/
+.fb{font-weight:bold;}
+.container_box .col_main .dev_id p span{
+   color:#999;
+}
+.safe_domain p label{
+    margin-right:5px;
+    color:#999;
+}
+.dev_id h4,.safe_domain h4{
+    font-weight:bold;
+    padding:10px;
+}
+.dev_id h4,.safe_domain p{
+    padding:5px;
+    font-size:14px;
+}
+.container_box .col_main .dev_id  a{
+    margin:0 20px;
+}
+
+.portal{
+    font-size:14px;
+    border-bottom: 1px solid #D9D9D9;
+    padding-bottom:10px;
+    padding-top:10px;
+   }
+.portal a:hover{
+ text-decoration:none;
+}
+.portal ul {
+    list-style: outside none none;
+    padding: 0;
+}
+.portal ul li{
+    height:35px;
+    line-height:35px;
+    padding-left:45px;
+}
+.portal ul li:hover{
+    background:#f8f8f8;
+    cursor: pointer;
+}
+
+.portal li a{
+    display:block;
+    color:#777;
+}
+.portal .cour a{
+   color:#004280;;
+}
+
+.portal h5 {
+    height: 45px;
+    line-height: 45px;
+   /* border-bottom: 1px solid #D9D9D9;*/
+    font-size: 14px;
+    text-indent: 32px;
+    color: #333;
+    cursor: pointer;
+    padding-left:10px
+}
+
+
+.arrow {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-left-color: #aaa;
+    display: inline-block;
+    margin-left: -12px;
+    font-size: 1px;
+    line-height: 0;
+}
+
+.active .arrow {
+    border-left-color: transparent;
+    border-top-color: #004280;
+    margin: 0 6px -3px -18px;
+}
+.apply{
+    border-bottom:2px solid #f8f8f8;
+    padding:10px;
+    margin:20px;
+    color:#999;
+}
+.apply a{
+    color:#249cfa;
+    cursor: pointer;
+}
+.banner {
+    background: #2f3f58 url("../image/banner.jpg") no-repeat scroll center center;
+    height:445px;
+    position:relative;
+}
+
+.container .manifesto{
+    height:80px;
+    line-height:80px;
+    font-size:18px;
+    text-align:center;
+}
+.container{
+
+}
+.container .manifesto span{
+    color:#e0002a;
+}
+.container .manifesto {
+    background:#F8f8f8;
+}
+.container .anli{
+    background:#fff;
+   padding-bottom:20px;
+}
+.anli p.tit{
+    font-size:16px;
+    font-weight:bold;
+    padding:20px 0 10px;
+    border-bottom:2px solid #2f3f58 ;
+
+}
+.anli ul{
+    padding-left:20px;
+
+}
+.anli ul::after{
+    clear: both;
+    content: "​";
+    display: block;
+    height: 0;
+}
+.anli li {
+    float: left;
+    margin: 20px 20px 0 0;
+    width: 220px;
+
+}
+.anli li p{
+    text-align:center;
+}
+.login p{
+    margin:10px 15px;
+}
+.ad{
+    color:#000;
+    position:absolute;
+    right:40%;
+    font-size:25px;
+    top:45%;
+
+}
+.login{
+    background: #fff none repeat scroll 0 0;
+    position:absolute;
+    right:5%;
+    margin-top: 20px;
+    width: 280px;
+}
+.login1{
+    /*background: #fff none repeat scroll 0 0;*/
+    bottom: 29%;
+    position: absolute;
+    right: 43%;
+   /* margin-top: 20px;
+    width: 280px;*/
+}
+
+.login h3{
+    background:#f8f8f8;
+    padding:8px 15px;
+}
+.login p span{
+    width:30px;
+    text-align:right;
+}
+ input[type="text"] ,.login input[type="password"]{
+    border: 1px solid #ddd;
+    color: #999;
+   display: block;
+    font-size: 14px;
+    height: 16px;
+    margin-right: 10px;
+    padding: 11px 10px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    width:230px;
+}
+ input[type="checkbox"] {
+    vertical-align: middle;
+    box-sizing: border-box;
+    padding: 0;
+}
+.login .check{
+    color: #666;
+    font-size: 12px;
+}
+.login .check .nologin{
+    margin-left:100px;
+}
+ input[type="button"] {
+    color: #fff;
+    font-size: 14px;
+    margin-right: 10px;
+    padding: 9px 10px;
+    transition: all 0.3s ease 0s;
+    width:100px;
+    background:#004280;
+}

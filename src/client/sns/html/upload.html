@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>商户入网</title>
+
+    <link type="text/css" rel="stylesheet" href="../../css/weui.css?rev=@@hash"/>
+    <link type="text/css" rel="stylesheet" href="../../css/shouba.css?rev=@@hash"/>
+</head>
+
+<body>
+
+<section id="registerPage">
+
+    <div class="phone">
+        <input name="phone" type="number" placeholder="手机号码" value=""/>
+    </div>
+
+    <div class="id-card">
+        <p>需要上传企业法人身份证照片</p>
+
+        <div class="card-front">
+            <div class='tips center-middle'>
+                <p>身份证正面照</p>
+            </div>
+            <img class='center-middle' data-serverId="" data-key="00" style="display: none;"/>
+        </div>
+
+        <div class="card-back">
+            <div class='tips  center-middle'>
+                <p>身份证反面照</p>
+            </div>
+            <img class='center-middle' data-serverId="" data-key="01" style="display: none;"/>
+        </div>
+    </div>
+
+    <div class="biz-license">
+        <p>需要上传企业营业执照照片</p>
+
+        <div class="license-card">
+            <div class='tips center-middle'>
+                <p>营业执照</p>
+            </div>
+
+            <!--<img class='center-middle' data-serverId="" data-key="10" style="display: none;"/>-->
+            <img class='center-middle' src="../../../doc/image/yz.license.jpeg" data-serverId="" data-key="10"/>
+        </div>
+    </div>
+
+    <div class="register-btn">
+        <button class=" btn-orange">我要注册</button>
+    </div>
+
+    <!--<div class="security">-->
+        <!--<p>收呗保证您的信息安全</p>-->
+    <!--</div>-->
+
+</section>
+
+<script type="text/javascript" src="../../js/lib/config.js?rev=@@hash"></script>
+<script data-main="../../js/pay/register.v2" src="../../js/lib/require.js?rev=@@hash"></script>
+
+</body>
+
+</html>

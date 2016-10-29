@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>钱包平台</title>
+    <link rel="stylesheet" href="css/up.css">
+</head>
+<body>
+      <div class="head_box">
+          <div class="inner">
+              <h1 class="logo">
+                  <a href="up.html"> <img title="银联钱包开放平台" src="image/sample.png"/></a>
+              </h1>
+
+          </div>
+      </div>
+
+  <div class="container_box">
+      <div class="col_side">
+
+          <div class="portal">
+              <h5><span class="arrow"></span>第三方商户接入接口说明</h5>
+              <div>
+                  <ul>
+                      <li class="active"><a href="devDocPortLogin.html">用户联登</a></li>
+                      <li><a href="devDocPortUIPlugin.html">调用钱包UI插件功能</a></li>
+                      <li><a href="devDocPortDemo.html">DEMO代码</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="portal">
+              <h5><span class="arrow"></span>钱包网页开发</h5>
+              <div style="display:none">
+                  <ul>
+                      <li><a>钱包网页授权</a></li>
+                      <li><a>钱包网页样式库</a></li>
+                      <li><a>钱包UP-SDK说明</a></li>
+                      <li><a>钱包开发者工具</a></li>
+                  </ul>
+              </div>
+          </div>
+
+      </div>
+      <div class="col_main">
+          <h2 class="tit">基本设置信息</h2>
+          <div class="dev_id">
+              <h4 class="dev_tit">开发者id</h4>
+              <p>
+                 <span> AppID(应用ID): </span> wx4ee9b5cc5a0d0674
+              </p>
+              <p><span>AppSecret(应用密钥)</span>
+                  446950ede65af51bd02af55267d86801<a>隐藏</a><a>设置</a>
+              </p>
+          </div>
+          <div class="safe_domain">
+              <h4>OAuth2.0网页基本授权</h4>
+              <p>用户在网页授权同意给商户后，银联钱包会将授权数据传给一个回调页面，回调页面会在此域名下，以保安全可靠。回调页面域名不支持ip地址</p>
+              <p><label>授权回调域名：</label><input type="text"></p>
+              <p class="confirm"> <input type="button" value="确定"></p>
+          </div>
+          <div class="safe_domain">
+              <h4>js接口安全域名</h4>
+              <p>
+                  设置JS接口安全域名后，公众号开发者可在该域名下调用钱包开放的JS接口。
+                  填写的JS接口安全域名要求是一级或一级以上域名，须通过ICP备案的验证，可填写三个域名(例：95516.com)，一个月内最多可修改三次域名，任意一个域名变更记为一次。
+              </p>
+              <p><label>域名一：</label><input type="text"></p>
+              <p><label>域名二：</label><input type="text"></p>
+              <p><label>域名三：</label><input type="text"></p>
+              <p class="confirm"> <input type="button" value="确定"></p>
+          </div>
+
+          <p>&nbsp;</p>
+
+      </div>
+
+
+
+  </div>
+  <div class="foot_box">
+      <div class="inner">
+          <ul class="link">
+              <li class="link_item first"><a target="_blank" href="">关于我们</a></li>
+              <li class="link_item"><a target="_blank" href="">服务协议</a></li>
+              <li class="link_item"><a target="_blank" href="">安全中心</a></li>
+              <li class="link_item"><a target="_blank" href="">用户反馈</a></li>
+          </ul>
+      </div>
+  </div>
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <script type="text/javascript" src="js/devDoc.js"></script>
+</body>
+</html>

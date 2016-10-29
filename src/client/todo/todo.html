@@ -1,0 +1,54 @@
+<h1 class="{{styles['title']}}">TODO</h1>
+<div class="weui_cells_title">
+    <p>你想干嘛</p>
+    <!--<h3> Prepare </h3>-->
+</div>
+<div class="weui_cells weui_cells_form weui_cells_checkbox weui_cells_access" id="todos">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" id="todo" type="text" placeholder="What needs to be done ?">
+        </div>
+    </div>
+    {{each todos as todo i}}
+    <a href="#/detail/{{todo.id}}" class="weui_cell weui_check_label {{styles['item']}} {{if todo.status == 1}}{{styles['completed']}}{{/if}}">
+        <label class="weui_cell_hd" for="{{todo.id}}">
+            <input type="checkbox" class="weui_check" name="checkbox1" data-id="{{todo.id}}" id="{{todo.id}}" {{if todo.status == 1}}checked{{/if}}>
+            <i class="weui_icon_checked"></i>
+        </label>
+        <div class="weui_cell_bd weui_cell_primary">
+            {{if todo.status == 1}}
+            <p><s>{{todo.title}}</s></p>
+            {{else}}
+            <p>{{todo.title}}</p>
+            {{/if}}
+        </div>
+        <div class="weui_cell_ft {{styles['remark']}}">
+            {{todo.remark.substring(0, 10)}}
+        </div>
+    </a>
+    {{/each}}
+</div>
+{{if DEBUG}}
+<div class="weui_btn_area">
+    <a class="weui_btn weui_btn_warn" href="javascript:" id="deleteAll">清空</a>
+</div>
+{{/if}}
+
+
+<!--<img class="{{styles['top-banner']}}" src="images/shaidan/top_img.jpg">-->
+
+<!--<div class="box">-->
+    <!--<span class="weui_cells_access">最新晒单规则</span>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;<div class="borders">&ndash;&gt;-->
+    <!--&lt;!&ndash;<input type="text" id="phoneInput" maxlength="13" placeholder="请输入手机号查询中奖信息" value="" id="mobile">&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--<div class="weui_search_bar">-->
+    <!--<input class="weui_search_input">-->
+<!--</div>-->
+
+<!--<button type="button" class="btnDisable" id="query" disabled="disabled">查询</button>-->
+
+

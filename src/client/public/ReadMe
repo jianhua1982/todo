@@ -1,0 +1,7 @@
+如何将DEMO运行起来?
+1. 创建目录cache目录去存储backendToken和fontToken.
+rm -rf mchnt/server/php/cache/;  mkdir mchnt/server/php/cache/ && chmod 777 mchnt/server/php/cache/
+
+2. 配置mchnt/server/php/config.php
+
+3. H5页面根目录在mchnt/h5/html/allInOne.html
