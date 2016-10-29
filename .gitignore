@@ -32,3 +32,6 @@ publish.sh
 
 
 #extras
+dist
+doc/
+src/
