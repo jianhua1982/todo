@@ -35,3 +35,4 @@ publish.sh
 dist
 doc/
 src/
+src/client/public

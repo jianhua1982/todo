@@ -10,9 +10,6 @@ module.exports = {
     context: path.join(__dirname, 'src'),
     entry: {
         js: './client/app.js',
-        //html: './client/index.html',
-        //js: './home/grid.js',
-        //html: './home/home.html',
         vendor: ['jquery', 'weui.js', 'fastclick']
     },
     output: {

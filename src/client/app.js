@@ -10,6 +10,7 @@ import actionsheet from './home/actionsheet';
 import todo from './todo/todo.js';
 import sns from './sns/sns';
 import allInOne from './public/mchnt/h5/js/allInOne';
+import addressBook from './addressBook/ab_main';
 
 //import alopay from '../alopay/./.v2/js/pay/main.js';
 
@@ -91,6 +92,14 @@ let grid = {
                 allInOne
             </p>
         </a>
+        <a href="#/addressBook" class="weui_grid">
+            <div class="weui_grid_icon">
+                <i class="icon"></i>
+            </div>
+            <p class="weui_grid_label">
+                addressBook
+            </p>
+        </a>
     </div>
 </div>`;
 
@@ -101,7 +110,8 @@ let grid = {
             .push(actionsheet)
             .push(todo)
             .push(sns)
-            .push(allInOne);
+            .push(allInOne)
+            .push(addressBook);
     }
 };
 
