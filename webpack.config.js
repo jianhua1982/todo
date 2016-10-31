@@ -42,9 +42,9 @@ module.exports = {
         ]
     },
     postcss: [autoprefixer],
-    //resolve: {
-    //    extensions: ['', '.js', '.jsx']
-    //},
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    },
     plugins: [
         new webpack.DefinePlugin({
             VERSION: pkg.version,
@@ -70,7 +70,8 @@ module.exports = {
     devServer: {
         contentBase: './dist',
         hot: true
+        //open: 'http://localhost:8080/#/addressBook',
+        //inline: true
     }
-
 };
 

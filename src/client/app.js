@@ -12,7 +12,6 @@ import sns from './sns/sns';
 import allInOne from './public/mchnt/h5/js/allInOne';
 import addressBook from './addressBook/ab_main';
 
-//import alopay from '../alopay/./.v2/js/pay/main.js';
 
 console.log('-------enter app.js-------');
 
@@ -35,20 +34,10 @@ let grid = {
     url: '/',
     className: 'grid',
     render: function () {
-        //const todos = dataManager.getData(dataManager.TODOS, []);
-        //return template.compile(tpl)({
-        //    todos: todos,
-        //    styles: styles,
-        //    DEBUG: DEBUG
-        //});
-//debugger
-        //return $('#tpl_home').html();
-//debugger
-
         return `
 <div class="hd">
     <h1 class="page_title">WeUI</h1>
-    <p class="page_desc">为微信Web服务量身设计</p>
+    <p class="page_desc">Proj based on WeUI.</p>
 </div>
 <div class="bd">
     <div class="weui_grids">
@@ -92,7 +81,7 @@ let grid = {
                 allInOne
             </p>
         </a>
-        <a href="#/addressBook" class="weui_grid">
+        <a href="#/addressBook" class="weui_grid debug-it">
             <div class="weui_grid_icon">
                 <i class="icon"></i>
             </div>
@@ -112,10 +101,26 @@ let grid = {
             .push(sns)
             .push(allInOne)
             .push(addressBook);
+
+        console.log('bind done');
+
     }
 };
 
 router.push(grid)
     .setDefault('/')
     .init();
+
+function debug() {
+    if($.isArray($('a'))) {
+        console.log('jQuery returns array.');
+    }
+    else {
+        console.log('Unexpected!!!');
+    }
+}
+debug();
+
+
+
 
